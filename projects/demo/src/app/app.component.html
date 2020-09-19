@@ -1,0 +1,34 @@
+<div class="container">
+    <nd-sample-rating class="text-center" [formControl]="ratingControl">
+    </nd-sample-rating>
+    <div class="mt-4">
+        <button class="btn btn-primary mr-2" (click)="ratingControl.enable()">Enable</button>
+        <button class="btn btn-secondary" (click)="ratingControl.disable()">Disable</button>    
+    </div>
+    <pre class="card bg-light mt-2 pt-2">
+    Value : {{ratingControl.value}}
+    Dirty : {{ratingControl.dirty}}
+    Touched : {{ratingControl.touched}}
+    Valid : {{ratingControl.valid}}
+    </pre>
+    
+    
+    <hr>
+    <form #form="ngForm">
+        <div class="form-group">
+          <label for="">Course</label>
+          <input type="text"
+            class="form-control" name="course" placeholder="Enter Course Name" ngModel>
+        </div>
+        <div class="form-group">
+          <label for="">Rating</label>
+          <nd-sample-rating [ratingIcons]="customIcons" [hideRatingMessage]="true" name="rating" ngModel #Rating="ngModel" >
+          </nd-sample-rating>
+          <span class="text-danger" *ngIf="Rating.invalid"> Ranting is mandatory </span>
+        </div>
+        <div class="card bg-light">
+            <pre>{{form.value | json}}</pre>
+        </div>
+        <button class="btn btn-primary" [disabled]="form.invalid">Save</button>
+    </form>
+</div>
