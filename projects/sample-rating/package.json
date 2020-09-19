@@ -1,6 +1,23 @@
 {
   "name": "@ngdevelop/sample-rating",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "author": {
+    "name": "Ankit Prajapati",
+    "url": "https://github.com/ngdevelop-tech/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ngdevelop-tech/ng-sample-rating-repo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngdevelop-tech/ng-sample-rating-repo/"
+  },
+  "keywords": [
+    "angular",
+    "rating"
+  ],
+  "homepage": "https://github.com/ngdevelop-tech/ng-sample-rating-repo/tree/master/projects/sample-rating",
   "peerDependencies": {
     "@angular/common": "^10.0.14",
     "@angular/core": "^10.0.14"
